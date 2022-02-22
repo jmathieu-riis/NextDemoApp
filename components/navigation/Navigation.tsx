@@ -1,13 +1,23 @@
 import type { NextComponentType } from 'next';
 import React from 'react';
-import { Container, Nav } from 'react-bootstrap';
-import Navbar from 'react-bootstrap/Navbar';
+import { Nav, Navbar } from 'react-bootstrap';
+import styled from 'styled-components';
 import styles from './Navigation.module.css';
+import NavigationContainer from './NavigationContainer';
+
+const StyledNavbar = styled(Navbar)`
+  width: 100%;
+  height: 100%;
+  line-height: 50px;
+  background-color: ${props => props.theme.current.navbar.background};
+  color: ${props => props.theme.current.navbar.color};
+`;
+
 
 const Navigation: NextComponentType = () => {
   return (
-    <Container className={styles.container}>
-      <Navbar className={`${styles['bg-light']} ${styles.navbar}`} variant="light">
+    <NavigationContainer>
+      <StyledNavbar>
         <Navbar.Brand className={styles['navbar-brand']} href="#home">Next.js</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
@@ -18,9 +28,9 @@ const Navigation: NextComponentType = () => {
             <Nav.Link href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app">Deploy</Nav.Link>
           </Nav>
         </Navbar.Collapse>
-      </Navbar>
-    </Container>
-  )
-}
+      </StyledNavbar>
+    </NavigationContainer>
+  );
+};
 
-export default Navigation
+export default Navigation;

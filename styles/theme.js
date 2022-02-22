@@ -6,10 +6,31 @@ const colors = {
     dark: '#1a181bff',
 };
 
-const theme = {
-    colors: colors,
+const lightTheme = {
     background: colors.light,
     color: colors.dark,
+    navbar: {
+        background: colors.dark,
+        color: colors.light,
+    }
 };
+
+const darkTheme = {
+    background: colors.dark,
+    color: colors.light,
+    navbar: {
+        background: colors.light,
+        color: colors.dark,
+    }
+};
+
+const theme = {
+    colors: colors,
+    dark: darkTheme,
+    light: lightTheme,
+    current: lightTheme,
+};
+
+export const myTheme = theme;
 
 export default theme;

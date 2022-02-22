@@ -1,10 +1,9 @@
 import React from 'react';
-import { ThemeProvider } from 'react-bootstrap';
-import styled, { useTheme } from 'styled-components';
+import styled from 'styled-components';
 
 export const StyledPage = styled.div`
-    background-color: ${props => props.theme.background};
-    color: ${props => props.theme.color};
+    background-color: ${props => props.theme.current.background};
+    color: ${props => props.theme.current.color};
     height: 100vh;
     width: 100vw;
 `;
@@ -12,13 +11,10 @@ export const StyledPage = styled.div`
 const Page = ({ children }: {
     children: any;
 }) => {
-    const theme = useTheme();
     return (
-        <ThemeProvider theme={theme}>
-            <StyledPage>
-                {children}
-            </StyledPage>
-        </ThemeProvider>
+        <StyledPage>
+            {children}
+        </StyledPage>
     );
 };
 
