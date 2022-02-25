@@ -1,16 +1,21 @@
 import type { NextComponentType } from 'next';
 import React from 'react';
 import { Nav, Navbar } from 'react-bootstrap';
-import styled from 'styled-components';
-import styles from './Navigation.module.css';
 import NavigationContainer from './NavigationContainer';
+import StyledNavbar from './components/StyledNavbar';
+import StyledNavbarBrand from './components/StyledNavbarBrand';
+import StyledNavLink from './components/StyledNavLink';
+import styled from 'styled-components';
 
-const StyledNavbar = styled(Navbar)`
-  width: 100%;
+const StyledNav = styled(Nav)`
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
   height: 100%;
-  line-height: 50px;
-  background-color: ${props => props.theme.current.navbar.background};
-  color: ${props => props.theme.current.navbar.color};
+`;
+
+const StyledCollapse = styled(Navbar.Collapse)`
+  flex-grow: 1;
 `;
 
 
@@ -18,16 +23,16 @@ const Navigation: NextComponentType = () => {
   return (
     <NavigationContainer>
       <StyledNavbar>
-        <Navbar.Brand className={styles['navbar-brand']} href="#home">Next.js</Navbar.Brand>
-        <Navbar.Toggle aria-controls="basic-navbar-nav" />
-        <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="me-auto">
-            <Nav.Link href="https://nextjs.org/docs">Documentation</Nav.Link>
-            <Nav.Link href="https://nextjs.org/learn">Learn</Nav.Link>
-            <Nav.Link href="https://github.com/vercel/next.js/tree/canary/examples">Examples</Nav.Link>
-            <Nav.Link href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app">Deploy</Nav.Link>
-          </Nav>
-        </Navbar.Collapse>
+        <StyledNavbarBrand href="#home">Next.js</StyledNavbarBrand>
+        {/* <Navbar.Toggle aria-controls="basic-navbar-nav" /> */}
+        <StyledCollapse id="basic-navbar-nav">
+          <StyledNav className="me-auto">
+            <StyledNavLink href="https://nextjs.org/docs">Documentation</StyledNavLink>
+            <StyledNavLink href="https://nextjs.org/learn">Learn</StyledNavLink>
+            <StyledNavLink href="https://github.com/vercel/next.js/tree/canary/examples">Examples</StyledNavLink>
+            <StyledNavLink href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app">Deploy</StyledNavLink>
+          </StyledNav>
+        </StyledCollapse>
       </StyledNavbar>
     </NavigationContainer>
   );

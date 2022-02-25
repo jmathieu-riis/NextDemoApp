@@ -1,5 +1,5 @@
 {
     "workbench.colorTheme": "Tomorrow Night Blue",
     "typescript.format.semicolons": "insert",
-    "typescript.preferences.quoteStyle": "single"
+    "typescript.preferences.quoteStyle": "single",
 }
