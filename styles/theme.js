@@ -29,6 +29,11 @@ const theme = {
     dark: darkTheme,
     light: lightTheme,
     current: lightTheme,
+    global: {
+        navbar: {
+            maxWidth: '1920px',
+        }
+    }
 };
 
 export const myTheme = theme;
