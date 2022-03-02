@@ -1,21 +1,46 @@
 import { NextPage } from 'next';
 import React from 'react';
+import styled from 'styled-components';
+import Card from '../../components/card';
+import CardOptions from '../../components/card/CardOptions';
 import theme from '../../styles/theme';
 
+const StyledContainer = styled.div`
+  max-width: ${props => props.theme.global.desktop.width};
+  margin: auto;
+`;
+
+const StyledColumnarLayout = styled.div`
+  width: 100%;
+  height: 100%;
+  display: grid;
+  gap: 1rem;
+  grid-auto-columns: 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+`;
+
 const ThemePage: NextPage = () => {
-  const generateColorBlocks: Element = () => {
-    const colors = theme.colors;
-    Object.keys(colors).map((key: string) => {
+  const generateColorBlocks = () => {
+    // @ts-ignore
+    const colors = Object.keys(theme.colors).map(key => theme.colors[key]);
+    const keys = Object.keys(theme.colors);
+    return colors.map((color, index) => {
+      const cardOptions = {
+        title: keys[index],
+        description: color,
+        backgroundColorOverride: color,
+      } as CardOptions;
       return (
-        // eslint-disable-next-line react/jsx-key
-        <div>{colors[key]}</div>
+        <Card key={color} options={cardOptions} />
       );
     });
   };
   return (
-    <ul>
-      {generateColorBlocks()}
-    </ul>
+    <StyledContainer>
+      <StyledColumnarLayout>
+        {generateColorBlocks()}
+      </StyledColumnarLayout>
+    </StyledContainer>
   );
 };
 

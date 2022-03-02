@@ -21,7 +21,6 @@ const StyledCollapse = styled(Navbar.Collapse)`
   flex-grow: 1;
 `;
 
-
 const Navigation: NextComponentType = () => {
   return (
     <NavigationContainer>
