@@ -1,15 +1,26 @@
 import React, { useState } from 'react';
 import { ToggleButton as ReactToggleButton } from 'react-bootstrap';
 import styled from 'styled-components';
+import { ButtonType } from '../types';
 
 const StyledToggleButton = styled(ReactToggleButton)`
 
 `;
 
+const HideMe = styled.div`display: none;`;
+
+const StyledToggleButtonContainer = styled.div(props => ({
+    width: '1em',
+    height: '1em',
+    backgroundColor: props.theme.colors[props.color ? props.color : 'primary'],
+    marginTop: 'auto',
+    marginBottom: 'auto',
+}));
+
 const ToggleButton = (
-    { id, type }: {
+    { id, buttonType }: {
         id: string;
-        type: string;
+        buttonType: ButtonType;
     }) => {
     const [value, setValue] = useState(0);
     const handleChange = () => {
@@ -20,14 +31,21 @@ const ToggleButton = (
         }
     };
     return (
-        <StyledToggleButton
-            type="radio"
-            id={id}
-            value={value}
-            onChange={handleChange}
+        <StyledToggleButtonContainer
+            onClick={handleChange}
+            color={buttonType}
         >
-            {`${value}`}
-        </StyledToggleButton>
+            <HideMe>
+                <ReactToggleButton
+                    type="checkbox"
+                    id={id}
+                    value={value}
+                    onChange={handleChange}
+                    checked={value === 1}
+                    style={{ display: 'none' }}
+                />
+            </HideMe>
+        </StyledToggleButtonContainer>
     );
 };
 

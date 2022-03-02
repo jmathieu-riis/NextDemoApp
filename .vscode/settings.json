@@ -2,4 +2,5 @@
     "workbench.colorTheme": "Tomorrow Night Blue",
     "typescript.format.semicolons": "insert",
     "typescript.preferences.quoteStyle": "single",
+    "editor.tabSize": 2,
 }

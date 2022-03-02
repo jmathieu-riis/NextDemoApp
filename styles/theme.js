@@ -4,6 +4,7 @@ const colors = {
     secondary: '#e75a7cff',
     light: '#eaeaeaff',
     dark: '#1a181bff',
+    darkgrey: '#464c64ff',
 };
 
 const lightTheme = {
@@ -32,6 +33,7 @@ const theme = {
     global: {
         navbar: {
             maxWidth: '1920px',
+            height: '50px',
         }
     }
 };
