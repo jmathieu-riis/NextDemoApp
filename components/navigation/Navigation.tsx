@@ -1,12 +1,9 @@
 import React from 'react';
 import { Nav, Navbar } from 'react-bootstrap';
-import NavigationContainer from './NavigationContainer';
-import StyledNavbar from './components/StyledNavbar';
-import StyledNavbarBrand from './components/StyledNavbarBrand';
-import StyledNavLink from './components/StyledNavLink';
 import styled from 'styled-components';
 import ToggleButton from '../buttons/toggle';
 import ROUTES from '../router/routes';
+import { NavigationContainer, StyledNavbar, StyledNavbarBrand, StyledNavLink } from './components';
 
 const StyledNav = styled(Nav)`
   display: flex;

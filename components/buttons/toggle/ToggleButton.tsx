@@ -3,39 +3,9 @@ import { ToggleButton as ReactToggleButton } from 'react-bootstrap';
 import styled from 'styled-components';
 import theme from '../../../styles/theme';
 import { ButtonType, buttonTypeToColor } from '../types';
+import { StyledSliderDot, StyledSlot, StyledToggleButtonContainer } from './components';
 
 const HideMe = styled.div`display: none;`;
-
-const StyledToggleButtonContainer = styled.div(() => ({
-  width: '2em',
-  height: '1em',
-  marginTop: 'auto',
-  marginBottom: 'auto',
-  cursor: 'pointer',
-}));
-
-const StyledSlot = styled.div(props => ({
-  width: '2em',
-  height: '0.6em',
-  backgroundColor: props.theme.colors.lightergrey,
-  marginTop: '0.2em',
-  marginBottom: '0.2em',
-  borderRadius: '0.3em',
-  position: 'relative',
-  bottom: '1em',
-  zIndex: 1,
-}));
-
-const StyledSliderDot = styled.div(props => ({
-  width: '1em',
-  height: '1em',
-  borderRadius: '0.5em',
-  position: 'relative',
-  left: props.theme.slider.position,
-  zIndex: 2,
-  backgroundColor: props.color,
-  transition: 'left 50ms ease',
-}));
 
 const ToggleButton = (
   { id, buttonType, onClick }: {

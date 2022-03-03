@@ -19,6 +19,3 @@ export const StyledNavLink = ({ path, children }: { path: string; children: any;
     </Link>
   );
 };
-
-
-export default StyledNavLink;

@@ -10,7 +10,7 @@ const StyledReactNavbarBrand = styled(Navbar.Brand)`
 `;
 
 
-const StyledNavbarBrand = ({ path, children }: { path: string; children: any; }) => {
+export const StyledNavbarBrand = ({ path, children }: { path: string; children: any; }) => {
   return (
     <Link href={path} passHref>
       <StyledReactNavbarBrand
@@ -21,6 +21,3 @@ const StyledNavbarBrand = ({ path, children }: { path: string; children: any; })
     </Link>
   );
 };
-
-
-export default StyledNavbarBrand;

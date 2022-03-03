@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-const NavigationContainer = styled.div`
+export const NavigationContainer = styled.div`
     width: 100%;
     height: 50px;
     display: flex;
@@ -12,5 +12,3 @@ const NavigationContainer = styled.div`
     background: ${props => props.theme.current.navbar.background};
     transition: ${props => props.theme.global.themeTransition};
 `;
-
-export default NavigationContainer;
