@@ -9,7 +9,8 @@ const NavigationContainer = styled.div`
     justify-content: center;
     align-items: center;
     padding: 0 120px 0 120px;
-    background: ${props => props.theme.current.navbar.background}
+    background: ${props => props.theme.current.navbar.background};
+    transition: ${props => props.theme.global.themeTransition};
 `;
 
 export default NavigationContainer;

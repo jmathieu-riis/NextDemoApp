@@ -2,16 +2,26 @@
 const colors = {
     primary: '#7180ac',
     secondary: '#e75a7c',
-    light: '#eaeaea',
+    lightsecondary: '#ed839d',
     dark: '#1a181b',
     darkgrey: '#464c64',
+    light: '#eaeaea',
     lightgrey: '#aeb5cb',
-    lightsecondary: '#ed839d',
+    lightergrey: '#ccd0db',
+    success: '#88a975',
+    warning: '#ff871f',
+    error: '#d81159',
+    link: '#f0976a',
 };
 
 const lightTheme = {
+    name: 'light',
     background: colors.light,
     color: colors.dark,
+    button: {
+        info: colors.darkgrey,
+        secondary: colors.secondary,
+    },
     navbar: {
         background: colors.dark,
         color: colors.light,
@@ -19,8 +29,13 @@ const lightTheme = {
 };
 
 const darkTheme = {
+    name: 'dark',
     background: colors.dark,
     color: colors.light,
+    button: {
+        info: colors.lightgrey,
+        secondary: colors.lightsecondary,
+    },
     navbar: {
         background: colors.light,
         color: colors.dark,
@@ -71,9 +86,8 @@ const theme = {
         },
         headers: typography.headers,
         paragraph: typography.paragraph,
+        themeTransition: 'background 175ms ease, color 175ms ease',
     }
 };
-
-export const myTheme = theme;
 
 export default theme;

@@ -1,4 +1,3 @@
-import type { NextComponentType } from 'next';
 import React from 'react';
 import { Nav, Navbar } from 'react-bootstrap';
 import NavigationContainer from './NavigationContainer';
@@ -7,7 +6,6 @@ import StyledNavbarBrand from './components/StyledNavbarBrand';
 import StyledNavLink from './components/StyledNavLink';
 import styled from 'styled-components';
 import ToggleButton from '../buttons/toggle';
-import { ButtonType } from '../buttons/types';
 import ROUTES from '../router/routes';
 
 const StyledNav = styled(Nav)`
@@ -21,17 +19,16 @@ const StyledCollapse = styled(Navbar.Collapse)`
   flex-grow: 1;
 `;
 
-const Navigation: NextComponentType = () => {
+const Navigation = ({ toggleTheme }: { toggleTheme: Function }) => {
   return (
     <NavigationContainer>
       <StyledNavbar>
         <StyledNavbarBrand path="/">Next.js</StyledNavbarBrand>
-        {/* <Navbar.Toggle aria-controls="basic-navbar-nav" /> */}
         <StyledCollapse id="basic-navbar-nav">
           <StyledNav className="me-auto">
             <ToggleButton
               id="toggle-theme-button"
-              buttonType={ButtonType.secondary}
+              onClick={toggleTheme}
             ></ToggleButton>
             <StyledNavLink path={ROUTES[1].path}>{ROUTES[1].label}</StyledNavLink>
             <StyledNavLink path="https://nextjs.org/docs">Documentation</StyledNavLink>

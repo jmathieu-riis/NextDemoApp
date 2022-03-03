@@ -11,6 +11,7 @@ const StyledNavbar = styled(Navbar)`
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    transition: ${props => props.theme.global.themeTransition};
 `;
 
 export default StyledNavbar;

@@ -2,20 +2,21 @@ import React from 'react';
 import styled from 'styled-components';
 
 export const StyledPage = styled.div`
-    background-color: ${props => props.theme.current.background};
-    color: ${props => props.theme.current.color};
-    height: 100vh;
-    width: 100vw;
+  background-color: ${props => props.theme.current.background};
+  color: ${props => props.theme.current.color};
+  height: 100vh;
+  width: 100vw;
+  transition: ${props => props.theme.global.themeTransition};
 `;
 
 const Page = ({ children }: {
-    children: any;
+  children: any;
 }) => {
-    return (
-        <StyledPage>
-            {children}
-        </StyledPage>
-    );
+  return (
+    <StyledPage>
+      {children}
+    </StyledPage>
+  );
 };
 
 export default Page;

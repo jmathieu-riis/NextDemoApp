@@ -3,6 +3,7 @@ import React from 'react';
 import styled from 'styled-components';
 import Card from '../../components/card';
 import CardOptions from '../../components/card/CardOptions';
+import { HeaderOne } from '../../components/headers';
 import theme from '../../styles/theme';
 
 const StyledContainer = styled.div`
@@ -18,6 +19,11 @@ const StyledColumnarLayout = styled.div`
   grid-auto-columns: 1fr;
   grid-template-columns: 1fr 1fr 1fr 1fr;
 `;
+
+const StyledSection = styled.section`
+  width: 100%;
+`;
+
 
 const ThemePage: NextPage = () => {
   const generateColorBlocks = () => {
@@ -37,9 +43,14 @@ const ThemePage: NextPage = () => {
   };
   return (
     <StyledContainer>
-      <StyledColumnarLayout>
-        {generateColorBlocks()}
-      </StyledColumnarLayout>
+      <StyledSection>
+        <HeaderOne>
+          Colors
+        </HeaderOne>
+        <StyledColumnarLayout>
+          {generateColorBlocks()}
+        </StyledColumnarLayout>
+      </StyledSection>
     </StyledContainer>
   );
 };

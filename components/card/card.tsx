@@ -41,7 +41,7 @@ const StyledCardText = styled(ReactCard.Text)`
 
 const Card = ({ options }: { options: CardOptions; }) => {
   let modifiedTheme = {
-    ...theme,
+    ...theme, 
     cardBackground: theme.current.background,
   };
   if (options.backgroundColorOverride !== null && options.backgroundColorOverride !== undefined) {
