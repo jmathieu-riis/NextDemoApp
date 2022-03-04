@@ -1,13 +1,14 @@
 import React, { useState } from 'react';
 import { ToggleButton as ReactToggleButton } from 'react-bootstrap';
 import styled from 'styled-components';
-import theme from '../../../styles/theme';
 import { ButtonType, buttonTypeToColor } from '../types';
 import { StyledSliderDot, StyledSlot, StyledToggleButtonContainer } from './components';
+import { observer } from 'mobx-react';
+import store from '../../../store';
 
 const HideMe = styled.div`display: none;`;
 
-const ToggleButton = (
+const ToggleButton = observer((
   { id, buttonType, onClick }: {
     id: string;
     buttonType?: ButtonType;
@@ -18,13 +19,15 @@ const ToggleButton = (
   const [value, setValue] = useState(0);
   const [color, setColor] = useState(buttonTypeToColor(buttonType));
   const [position, setPosition] = useState(initialPosition);
+  const [slotOverlay, setSlotOverlay] = useState('');
 
   const handleChange = () => {
     onClick();
     if (value === 0) {
       setValue(1);
-      setColor(theme.colors.success);
+      setColor(store.theme.colors.success);
       setPosition('calc(1em + 1px)');
+      setSlotOverlay(store.theme.colors.success);
     } else {
       setValue(0);
       setColor(buttonTypeToColor(buttonType));
@@ -38,9 +41,11 @@ const ToggleButton = (
     >
       <StyledSliderDot
         color={color}
-        theme={{ ...theme, slider: { position: position } }}
+        theme={{ ...store.theme, slider: { position: position } }}
       />
-      <StyledSlot>
+      <StyledSlot
+        overlay={slotOverlay}
+      >
         <HideMe>
           <ReactToggleButton
             type="checkbox"
@@ -54,6 +59,6 @@ const ToggleButton = (
       </StyledSlot>
     </StyledToggleButtonContainer>
   );
-};
+});
 
 export default ToggleButton;

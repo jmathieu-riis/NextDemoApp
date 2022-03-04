@@ -94,7 +94,7 @@ const typography = {
     }
 };
 
-const theme = {
+export const theme = {
     colors: colors,
     dark: darkTheme,
     light: lightTheme,

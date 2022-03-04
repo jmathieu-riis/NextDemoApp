@@ -1,21 +1,21 @@
 interface BackgroundAndFontColor {
-  background: String,
-  color: String,
+  background: string,
+  color: string,
 }
 
 export interface ColorTheme {
-  name: String,
-  background: String,
-  color: String,
+  name: string,
+  background: string,
+  color: string,
   button: {
-      info: String,
-      secondary: String,
+      info: string,
+      secondary: string,
   },
   card: BackgroundAndFontColor,
   navbar: BackgroundAndFontColor,
   headers: {
       h1: {
-          color: String,
+          color: string,
       }
   }
 };
