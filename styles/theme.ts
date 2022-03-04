@@ -1,10 +1,14 @@
+import { ColorTheme } from './types';
 
 const colors = {
     primary: '#7180ac',
     secondary: '#e75a7c',
     lightsecondary: '#ed839d',
+    black: '#000000',
     dark: '#1a181b',
+    darkergrey: '#25252d',
     darkgrey: '#464c64',
+    white: '#ffffff',
     light: '#eaeaea',
     lightgrey: '#aeb5cb',
     lightergrey: '#ccd0db',
@@ -14,7 +18,8 @@ const colors = {
     link: '#f0976a',
 };
 
-const lightTheme = {
+
+const lightTheme: ColorTheme = {
     name: 'light',
     background: colors.light,
     color: colors.dark,
@@ -22,13 +27,22 @@ const lightTheme = {
         info: colors.darkgrey,
         secondary: colors.secondary,
     },
+    card: {
+        background: colors.light,
+        color: colors.dark,
+    },
     navbar: {
         background: colors.dark,
         color: colors.light,
+    },
+    headers: {
+        h1: {
+            color: colors.dark,
+        }
     }
 };
 
-const darkTheme = {
+const darkTheme: ColorTheme = {
     name: 'dark',
     background: colors.dark,
     color: colors.light,
@@ -36,9 +50,18 @@ const darkTheme = {
         info: colors.lightgrey,
         secondary: colors.lightsecondary,
     },
+    card: {
+        background: colors.darkergrey,
+        color: colors.light,
+    },
     navbar: {
-        background: colors.light,
-        color: colors.dark,
+        background: colors.darkergrey,
+        color: colors.light,
+    },
+    headers: {
+        h1: {
+            color: colors.secondary,
+        }
     }
 };
 
