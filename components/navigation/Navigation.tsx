@@ -4,6 +4,8 @@ import styled from 'styled-components';
 import ToggleButton from '../buttons/toggle';
 import ROUTES from '../router/routes';
 import { NavigationContainer, StyledNavbar, StyledNavbarBrand, StyledNavLink } from './components';
+import { observer } from 'mobx-react';
+import store from '../../store';
 
 const StyledNav = styled(Nav)`
   display: flex;
@@ -16,7 +18,10 @@ const StyledCollapse = styled(Navbar.Collapse)`
   flex-grow: 1;
 `;
 
-const Navigation = ({ toggleTheme }: { toggleTheme: Function }) => {
+const Navigation = observer(() => {
+  const toggleThemeHandler = () => {
+    store.toggleTheme();
+  }
   return (
     <NavigationContainer>
       <StyledNavbar>
@@ -25,7 +30,7 @@ const Navigation = ({ toggleTheme }: { toggleTheme: Function }) => {
           <StyledNav className="me-auto">
             <ToggleButton
               id="toggle-theme-button"
-              onClick={toggleTheme}
+              onClick={toggleThemeHandler}
             ></ToggleButton>
             <StyledNavLink path={ROUTES[1].path}>{ROUTES[1].label}</StyledNavLink>
             <StyledNavLink path="https://nextjs.org/docs">Documentation</StyledNavLink>
@@ -37,6 +42,6 @@ const Navigation = ({ toggleTheme }: { toggleTheme: Function }) => {
       </StyledNavbar>
     </NavigationContainer>
   );
-};
+});
 
 export default Navigation;

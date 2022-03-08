@@ -9,4 +9,5 @@ export const StyledSliderDot = styled.div(props => ({
   zIndex: 2,
   backgroundColor: props.color,
   transition: 'left 50ms ease',
+  boxShadow: `0px 0px 3px 2px ${props.color}16`,
 }));
