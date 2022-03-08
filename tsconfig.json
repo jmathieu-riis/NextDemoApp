@@ -23,20 +23,19 @@
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx",
-    "scripts/typedoc/main.js",
-    "scripts/typedoc/folders.mjs"
   ],
   "exclude": [
     "node_modules",
-    "scripts"
+    "scripts",
   ],
   "typedocOptions": {
     "entryPoints": [
       "pages",
-      "components/card",
-      "components/card/interfaces",
-      "components/card/components"
+      "node_modules/react-bootstrap/esm/Card.d.ts",
+      "node_modules/react-bootstrap/esm/helpers.d.ts",
     ],
     "out": "docs",
+    "name": "Next Demo",
+    "readme": "README.md",
   }
 }

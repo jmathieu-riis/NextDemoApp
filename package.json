@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev -p 3001",
-    "doc": "typedoc",
+    "doc": "node scripts/updateTypeDocConfig.ts && typedoc",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
