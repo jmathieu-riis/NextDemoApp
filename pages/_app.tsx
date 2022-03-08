@@ -1,3 +1,4 @@
+import { observer } from "mobx-react";
 import '../styles/globals.css';
 import type { AppProps } from 'next/app';
 import { ThemeProvider } from 'styled-components';
@@ -6,18 +7,17 @@ import Navigation from '../components/navigation';
 import Page from '../containers/page';
 import theme from '../styles/theme';
 import { useState } from 'react';
+import { NextDemoAppStore } from '../stores';
+
+const store = new NextDemoAppStore;
 
 function MyApp({ Component, pageProps }: AppProps) {
   const [currentTheme, setCurrentTheme] = useState(theme);
   const toggleTheme = () => {
-    if (currentTheme.current.name === 'light') {
-      setCurrentTheme({ ...theme, current: theme.dark });
-    } else {
-      setCurrentTheme({ ...theme, current: theme.light });
-    }
+    store.themeStore.toggleTheme();
   };
   return (
-    <ThemeProvider theme={currentTheme}>
+    <ThemeProvider theme={store.themeStore.theme}>
       <Page>
         <Navigation
           toggleTheme={toggleTheme}
@@ -33,4 +33,4 @@ function MyApp({ Component, pageProps }: AppProps) {
   );
 }
 
-export default MyApp;
+export default observer(MyApp);
