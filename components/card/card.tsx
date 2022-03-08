@@ -1,5 +1,5 @@
 import React from 'react';
-import theme from '../../styles/theme';
+import { theme } from '../../styles';
 import { StyledBody, StyledCard, StyledCardText, StyledCardTitle, StyledPreview } from './components';
 import { CardOptions } from './interfaces';
 

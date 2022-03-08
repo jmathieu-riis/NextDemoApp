@@ -28,14 +28,4 @@
     "node_modules",
     "scripts",
   ],
-  "typedocOptions": {
-    "entryPoints": [
-      "pages",
-      "node_modules/react-bootstrap/esm/Card.d.ts",
-      "node_modules/react-bootstrap/esm/helpers.d.ts",
-    ],
-    "out": "docs",
-    "name": "Next Demo",
-    "readme": "README.md",
-  }
 }

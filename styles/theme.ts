@@ -112,5 +112,3 @@ export const theme = {
         themeTransition: 'background 175ms ease, color 175ms ease',
     }
 };
-
-export default theme;

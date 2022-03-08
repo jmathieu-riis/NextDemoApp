@@ -1,5 +1,5 @@
 import { makeAutoObservable, observable, action } from 'mobx';
-import { theme as myTheme } from '../styles/theme';
+import { theme as myTheme } from '../styles';
 import { ColorTheme } from '../styles/types';
 
 interface Theme {

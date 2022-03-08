@@ -1,0 +1,23 @@
+{
+  "entryPoints": [
+    "components/buttons/toggle",
+    "components/buttons/toggle/components",
+    "components/card",
+    "components/card/components",
+    "components/card/interfaces",
+    "components/headers",
+    "components/navigation",
+    "components/navigation/components",
+    "containers/page",
+    "pages",
+    "pages/theme",
+    "store",
+    "styles",
+    "styles/types",
+    "node_modules/react-bootstrap/esm/Card.d.ts",
+    "node_modules/react-bootstrap/esm/helpers.d.ts"
+  ],
+  "out": "docs",
+  "name": "Next Demo",
+  "readme": "README.md"
+}

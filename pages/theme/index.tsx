@@ -1,10 +1,11 @@
+/** @module Pages/Theme */
 import { NextPage } from 'next';
 import React from 'react';
 import styled from 'styled-components';
 import Card from '../../components/card';
 import { CardOptions } from '../../components/card/interfaces';
 import { HeaderOne } from '../../components/headers';
-import theme from '../../styles/theme';
+import { theme } from '../../styles';
 
 const StyledContainer = styled.div`
   max-width: ${props => props.theme.global.desktop.width};
