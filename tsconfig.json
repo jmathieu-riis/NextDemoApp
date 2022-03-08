@@ -1,7 +1,11 @@
 {
   "compilerOptions": {
     "target": "es5",
-    "lib": ["dom", "dom.iterable", "esnext"],
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
     "allowJs": true,
     "skipLibCheck": true,
     "strict": true,
@@ -15,6 +19,24 @@
     "jsx": "preserve",
     "incremental": true
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
-  "exclude": ["node_modules"]
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    "scripts/typedoc/main.js",
+    "scripts/typedoc/folders.mjs"
+  ],
+  "exclude": [
+    "node_modules",
+    "scripts"
+  ],
+  "typedocOptions": {
+    "entryPoints": [
+      "pages",
+      "components/card",
+      "components/card/interfaces",
+      "components/card/components"
+    ],
+    "out": "docs",
+  }
 }

@@ -1,7 +1,7 @@
 import React from 'react';
 import theme from '../../styles/theme';
-import CardOptions from './CardOptions';
 import { StyledBody, StyledCard, StyledCardText, StyledCardTitle, StyledPreview } from './components';
+import { CardOptions } from './interfaces';
 
 const Card = ({ options }: { options: CardOptions; }) => {
   let modifiedTheme = {

@@ -2,7 +2,7 @@ import { NextPage } from 'next';
 import React from 'react';
 import styled from 'styled-components';
 import Card from '../../components/card';
-import CardOptions from '../../components/card/CardOptions';
+import { CardOptions } from '../../components/card/interfaces';
 import { HeaderOne } from '../../components/headers';
 import theme from '../../styles/theme';
 

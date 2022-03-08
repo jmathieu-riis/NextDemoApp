@@ -1,3 +1,4 @@
+/** @module Card/Components */
 export { StyledCard } from './StyledCard';
 export { StyledBody } from './StyledBody';
 export { StyledCardText } from './StyledCardText';
