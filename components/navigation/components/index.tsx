@@ -1,3 +1,4 @@
+/** @module Navigation/Components */
 export { NavigationContainer } from './NavigationContainer';
 export { StyledNavbar } from './StyledNavbar';
 export { StyledNavbarBrand } from './StyledNavbarBrand';

@@ -1,4 +1,6 @@
-interface BackgroundAndFontColor {
+/** @module Styles/Interfaces */
+
+export interface BackgroundAndFontColor {
   background: string,
   color: string,
 }
@@ -19,3 +21,11 @@ export interface ColorTheme {
       }
   }
 };
+
+export interface Theme {
+  colors: any,
+  light: ColorTheme,
+  dark: ColorTheme,
+  current: ColorTheme,
+  global: any,
+}

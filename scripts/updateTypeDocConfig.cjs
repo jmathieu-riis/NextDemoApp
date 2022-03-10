@@ -1,19 +1,19 @@
 const fs = require('fs');
-const typeDocConfigPath = 'typedoc.json';
+const prefix = '../';
+const typeDocConfigPath = `${prefix}typedoc.json`;
 const originalConfigString = fs.readFileSync(typeDocConfigPath).toString();
 const originalConfig = JSON.parse(originalConfigString);
 
 const nodeModuleEntryPoints = [
-  "node_modules/react-bootstrap/esm/Card.d.ts",
-  "node_modules/react-bootstrap/esm/helpers.d.ts"
+  "../node_modules/react-bootstrap/esm/Card.d.ts",
+  "../node_modules/react-bootstrap/esm/helpers.d.ts"
 ];
 
 const appEntryPoints = [
-  "components",
-  "containers",
-  "pages",
-  "store",
-  "styles"
+  `${prefix}components`,
+  `${prefix}containers`,
+  `${prefix}store`,
+  `${prefix}styles`
 ];
 
 let allEntryPoints = [];

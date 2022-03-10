@@ -1,4 +1,5 @@
-import { theme } from '../../styles';
+/** @module Buttons */
+import { theme } from '../../../styles';
 
 export enum ButtonType {
     primary = 'primary',

@@ -1,4 +1,4 @@
-import { ColorTheme } from './types';
+import { ColorTheme } from './interfaces';
 
 const colors = {
     primary: '#7180ac',

@@ -1,0 +1,16 @@
+.tsd-navigation ul li.tsd-kind-module,
+.tsd-navigation ul li.tsd-is-external,
+.tsd-navigation ul li:first-child,
+.tsd-navigation.primary ul {
+  border: 0px;
+}
+
+.tsd-navigation ul li.indented-list-item {
+  line-height: 1;
+  font-size: 0.9em;
+}
+
+.tsd-navigation ul li.indented-list-item a {
+  padding-left: 1.5em;
+  font-style: italic;
+}

@@ -1,14 +1,14 @@
 import React, { useState } from 'react';
 import { ToggleButton as ReactToggleButton } from 'react-bootstrap';
 import styled from 'styled-components';
-import { ButtonType, buttonTypeToColor } from '../types';
+import { ButtonType, buttonTypeToColor } from '../interfaces';
 import { StyledSliderDot, StyledSlot, StyledToggleButtonContainer } from './components';
 import { observer } from 'mobx-react';
 import store from '../../../store';
 
 const HideMe = styled.div`display: none;`;
 
-const ToggleButton = observer((
+const ToggleButton = (
   { id, buttonType, onClick }: {
     id: string;
     buttonType?: ButtonType;
@@ -44,7 +44,7 @@ const ToggleButton = observer((
         theme={{ ...store.theme, slider: { position: position } }}
       />
       <StyledSlot
-        overlay={slotOverlay}
+        overlayColor={slotOverlay}
       >
         <HideMe>
           <ReactToggleButton
@@ -59,6 +59,6 @@ const ToggleButton = observer((
       </StyledSlot>
     </StyledToggleButtonContainer>
   );
-});
+};
 
-export default ToggleButton;
+export default observer(ToggleButton);

@@ -7,7 +7,7 @@ import Page from '../containers/page';
 import { observer } from 'mobx-react';
 import store from '../store';
 
-const MyApp = observer(({ Component, pageProps }: AppProps) => {
+const MyApp = ({ Component, pageProps }: AppProps) => {
   return (
     <ThemeProvider theme={store.theme}>
       <Page>
@@ -21,6 +21,6 @@ const MyApp = observer(({ Component, pageProps }: AppProps) => {
       </Page>
     </ThemeProvider>
   );
-});
+};
 
-export default MyApp;
+export default observer(MyApp);
