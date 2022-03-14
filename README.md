@@ -1,3 +1,4 @@
+# Next Demo Project
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
@@ -32,8 +33,12 @@ Run the command:
 yarn doc
 ```
 
-Documentation will appear under the `./docs` folder
+Documentation will appear under the `docs` folder
 
+Configuration files and scripts for generating the documentation exist under the `scripts/typedoc` folder
+
+> Click [here](scripts/typedoc/README.md) for more information
+---
 ## Learn More
 
 To learn more about Next.js, take a look at the following resources:
