@@ -1,0 +1,24 @@
+{
+  "entryPoints": [
+    "../../components/buttons/interfaces",
+    "../../components/buttons/toggle",
+    "../../components/buttons/toggle/components",
+    "../../components/buttons/toggle/interfaces",
+    "../../components/card",
+    "../../components/card/components",
+    "../../components/card/interfaces",
+    "../../components/headers",
+    "../../components/navigation",
+    "../../components/navigation/components",
+    "../../containers/page",
+    "../../store",
+    "../../styles",
+    "../../styles/interfaces",
+    "../../node_modules/react-bootstrap/esm/Card.d.ts",
+    "../../node_modules/react-bootstrap/esm/helpers.d.ts"
+  ],
+  "out": "../../docs",
+  "name": "Next Demo",
+  "readme": "../../README.md",
+  "customCss": "./assets/sidebar.css"
+}

@@ -1,16 +1,9 @@
+/** @module Store */
 import { makeAutoObservable, observable, action } from 'mobx';
-import { theme as myTheme } from '../styles/theme';
-import { ColorTheme } from '../styles/types';
+import { theme as myTheme } from '../styles';
+import { Theme } from '../styles/interfaces';
 
-interface Theme {
-  colors: any,
-  light: ColorTheme,
-  dark: ColorTheme,
-  current: ColorTheme,
-  global: any,
-}
-
-class Store {
+export class Store {
   theme: Theme = myTheme;
 
   constructor() {

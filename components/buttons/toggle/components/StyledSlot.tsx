@@ -1,9 +1,5 @@
 import styled from 'styled-components';
-
-interface StyledSlotProps {
-  theme: any,
-  overlay: string,
-}
+import { StyledSlotProps } from '../interfaces';
 
 export const StyledSlot = styled.div<StyledSlotProps>(props => ({
   width: '2em',
@@ -15,5 +11,5 @@ export const StyledSlot = styled.div<StyledSlotProps>(props => ({
   position: 'relative',
   bottom: '1em',
   zIndex: 1,
-  boxShadow: `inset 2em 0 0 0 ${props.overlay ? props.overlay : ''}24`,
+  boxShadow: `inset 2em 0 0 0 ${props.overlayColor ? props.overlayColor : ''}24`,
 }));

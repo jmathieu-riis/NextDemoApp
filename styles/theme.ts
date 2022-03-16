@@ -1,4 +1,4 @@
-import { ColorTheme } from './types';
+import { ColorTheme } from './interfaces';
 
 const colors = {
     primary: '#7180ac',
@@ -112,5 +112,3 @@ export const theme = {
         themeTransition: 'background 175ms ease, color 175ms ease',
     }
 };
-
-export default theme;

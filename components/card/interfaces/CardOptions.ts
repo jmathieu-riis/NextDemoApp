@@ -1,4 +1,4 @@
-export default interface CardOptions {
+export interface CardOptions {
   backgroundColorOverride: string,
   title: string,
   description: string,

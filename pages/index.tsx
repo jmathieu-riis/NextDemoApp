@@ -1,3 +1,4 @@
+/** @module Pages/Home */
 import type { NextPage } from 'next';
 import { HeaderOne } from '../components/headers';
 

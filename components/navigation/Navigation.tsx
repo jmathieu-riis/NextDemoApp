@@ -2,7 +2,7 @@ import React from 'react';
 import { Nav, Navbar } from 'react-bootstrap';
 import styled from 'styled-components';
 import ToggleButton from '../buttons/toggle';
-import ROUTES from '../router/routes';
+import ROUTES from '../router/constants';
 import { NavigationContainer, StyledNavbar, StyledNavbarBrand, StyledNavLink } from './components';
 import { observer } from 'mobx-react';
 import store from '../../store';
@@ -18,7 +18,7 @@ const StyledCollapse = styled(Navbar.Collapse)`
   flex-grow: 1;
 `;
 
-const Navigation = observer(() => {
+const Navigation = () => {
   const toggleThemeHandler = () => {
     store.toggleTheme();
   }
@@ -42,6 +42,6 @@ const Navigation = observer(() => {
       </StyledNavbar>
     </NavigationContainer>
   );
-});
+};
 
-export default Navigation;
+export default observer(Navigation);
