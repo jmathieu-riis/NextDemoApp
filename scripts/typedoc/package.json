@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "description": "Scripts for generating documentation for Next Demo project",
   "scripts": {
-    "doc": "node src/index.js"
+    "doc": "node src/index.js",
+    "test": "node src/test.js"
   },
   "keywords": [
     "scripts",
@@ -12,6 +13,8 @@
   "author": "Jacques Mathieu",
   "license": "ISC",
   "devDependencies": {
+    "isomorphic-dompurify": "^0.18.0",
+    "marked": "^4.0.12",
     "typedoc": "^0.22.13",
     "typedoc-plugin-rename-defaults": "^0.4.0",
     "typescript": "^4.6.2"
