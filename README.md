@@ -38,6 +38,11 @@ Documentation will appear under the `docs` folder
 Configuration files and scripts for generating the documentation exist under the `scripts/typedoc` folder
 
 > Click [here](scripts/typedoc/README.md) for more information
+
+#### Tips:
+> - When adding new files to the project that you want documented, make sure your component has an `index.tsx` or `index.ts` file associated with it
+> - At the top of this file, be sure to label it with something like `/** @module ModuleName */` or `/** @module ModuleName/SubmoduleComponents */`
+
 ---
 ## Learn More
 
