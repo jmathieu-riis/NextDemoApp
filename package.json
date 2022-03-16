@@ -6,6 +6,7 @@
     "dev": "next dev -p 3001",
     "doc": "yarn --cwd scripts/typedoc doc",
     "build": "next build",
+    "postinstall": "yarn --cwd scripts/typedoc",
     "start": "next start",
     "lint": "next lint"
   },
