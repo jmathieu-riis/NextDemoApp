@@ -39,6 +39,7 @@ export interface ColorTheme {
   },
   card: BackgroundAndFontColor,
   navbar: BackgroundAndFontColor,
+  notification: BackgroundAndFontColor,
   headers: {
     h1: {
       color: string,

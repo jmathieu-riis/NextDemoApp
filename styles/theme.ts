@@ -35,6 +35,10 @@ const lightTheme: ColorTheme = {
     background: colors.dark,
     color: colors.light,
   },
+  notification: {
+    background: colors.light,
+    color: colors.dark,
+  },
   headers: {
     h1: {
       color: colors.dark,
@@ -55,6 +59,10 @@ const darkTheme: ColorTheme = {
     color: colors.light,
   },
   navbar: {
+    background: colors.darkergrey,
+    color: colors.light,
+  },
+  notification: {
     background: colors.darkergrey,
     color: colors.light,
   },

@@ -10,6 +10,7 @@
     "../../components/headers",
     "../../components/navigation",
     "../../components/navigation/components",
+    "../../components/notification",
     "../../containers/page",
     "../../store",
     "../../styles",
