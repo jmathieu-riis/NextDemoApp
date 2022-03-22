@@ -1,5 +1,5 @@
 import React from 'react';
-import { NotificationContainer } from './containers/NotificationContainer';
+import { NotificationContainer } from './containers';
 
 export const Notification = ({ message, hidden }: { message: string; hidden?: boolean, }) => {
   return (

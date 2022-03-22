@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { NotificationContainerProps } from '../interfaces/NotificationContainerProps';
+import { NotificationContainerProps } from '../interfaces';
 
 export const NotificationContainer = styled.div<NotificationContainerProps>`
   background: ${props => props.theme.current.notification.background};

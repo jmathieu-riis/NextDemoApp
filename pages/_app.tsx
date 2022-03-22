@@ -6,8 +6,18 @@ import Navigation from '../components/navigation';
 import Page from '../containers/page';
 import { observer } from 'mobx-react';
 import store from '../store';
+import { initInternetConnectivityListener } from '../util';
+import { useEffect, useState } from 'react';
+
 
 const MyApp = ({ Component, pageProps }: AppProps) => {
+  const [connectivityListenerActive, setConnectivityListenerActive] = useState(false);
+  useEffect(() => {
+    if (!connectivityListenerActive) {
+      initInternetConnectivityListener((status) => { store.setInternetConnectionStatus(status); });
+    }
+    setConnectivityListenerActive(true);
+  }, [connectivityListenerActive]);
   return (
     <ThemeProvider theme={store.theme}>
       <Page>

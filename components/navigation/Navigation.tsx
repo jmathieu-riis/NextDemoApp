@@ -33,7 +33,7 @@ const Navigation = () => {
               onClick={toggleThemeHandler}
             ></ToggleButton>
             <StyledNavLink path={ROUTES.theme.path}>{ROUTES.theme.label}</StyledNavLink>
-            <StyledNavLink path={ROUTES.notification.path}>{ROUTES.notification.label}</StyledNavLink>
+            <StyledNavLink path={ROUTES.status.path}>{ROUTES.status.label}</StyledNavLink>
             <StyledNavLink path="https://nextjs.org/docs">Documentation</StyledNavLink>
             <StyledNavLink path="https://nextjs.org/learn">Learn</StyledNavLink>
             <StyledNavLink path="https://github.com/vercel/next.js/tree/canary/examples">Examples</StyledNavLink>

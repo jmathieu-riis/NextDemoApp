@@ -8,9 +8,9 @@ const ROUTES = {
     path: '/',
     label: 'Home',
   } as PathAndLabel,
-  'notification': {
-    path: '/notification',
-    label: 'Notification',
+  'status': {
+    path: '/status',
+    label: 'Status',
   } as PathAndLabel,
   'theme': {
     path: '/theme',

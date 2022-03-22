@@ -20,7 +20,8 @@ const appEntryPoints = [
   `${filesInMainPrefix}components`,
   `${filesInMainPrefix}containers`,
   `${filesInMainPrefix}store`,
-  `${filesInMainPrefix}styles`
+  `${filesInMainPrefix}styles`,
+  `${filesInMainPrefix}util`,
 ];
 
 const out = `${filesInMainPrefix}docs`;
