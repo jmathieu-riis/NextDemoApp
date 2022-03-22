@@ -2,15 +2,15 @@
 import { theme } from '../../../styles';
 
 export enum ButtonType {
-    primary = 'primary',
-    secondary = 'secondary',
-    dark = 'dark',
-    error = 'error',
-    info = 'info',
-    light = 'light',
-    link = 'link',
-    success = 'success',
-    warning = 'warning',
+  primary = 'primary',
+  secondary = 'secondary',
+  dark = 'dark',
+  error = 'error',
+  info = 'info',
+  light = 'light',
+  link = 'link',
+  success = 'success',
+  warning = 'warning',
 };
 
 const Primary: ButtonType = ButtonType.primary;
@@ -24,17 +24,17 @@ const Success: ButtonType = ButtonType.success;
 const Warning: ButtonType = ButtonType.warning;
 
 export const buttonTypeToColor = (type: ButtonType | undefined): string => {
-    switch (type) {
-        case Primary || Secondary || Light || Dark || Error || Warning || Link || Success:
-            return theme.colors[type];
+  switch (type) {
+    case Primary || Secondary || Light || Dark || Error || Warning || Link || Success:
+      return theme.colors[type];
 
-        case Info:
-            return theme.current.button.info;
+    case Info:
+      return theme.current.button.info;
 
-        case Secondary:
-            return theme.current.button.secondary;
+    case Secondary:
+      return theme.current.button.secondary;
 
-        default:
-            return theme.colors.primary;
-    }
+    default:
+      return theme.colors.primary;
+  }
 };

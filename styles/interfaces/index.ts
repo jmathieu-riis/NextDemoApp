@@ -5,21 +5,46 @@ export interface BackgroundAndFontColor {
   color: string,
 }
 
+export interface FontStyle {
+  fontSize: string,
+  fontWeight: string,
+}
+
+export interface TypographyTheme {
+  headers: {
+    h1: FontStyle,
+    h2: FontStyle,
+    h3: FontStyle,
+    h4: FontStyle,
+    h5: FontStyle,
+  },
+  paragraph: FontStyle,
+}
+
+export interface GlobalStyles {
+  navbar: {},
+  desktop: {},
+  headers: TypographyTheme['headers'],
+  paragraph: TypographyTheme['paragraph'],
+  themeTransition?: string,
+}
+
 export interface ColorTheme {
   name: string,
   background: string,
   color: string,
   button: {
-      info: string,
-      secondary: string,
+    info: string,
+    secondary: string,
   },
   card: BackgroundAndFontColor,
   navbar: BackgroundAndFontColor,
+  notification: BackgroundAndFontColor,
   headers: {
-      h1: {
-          color: string,
-      }
-  }
+    h1: {
+      color: string,
+    };
+  };
 };
 
 export interface Theme {
@@ -27,5 +52,5 @@ export interface Theme {
   light: ColorTheme,
   dark: ColorTheme,
   current: ColorTheme,
-  global: any,
+  global: GlobalStyles,
 }
